@@ -1,75 +1,10 @@
 
 xv6 kernel is booting
 
-hart 1 starting
 hart 2 starting
+hart 1 starting
 init: starting sh
-$ strace 2 usertests forkforkfork
-usertests starting
-3: syscall fork -> 4
-test forkforkfork: 3: syscall fork -> 5
-5: syscall fork -> 6
-6: syscall fork -> 7
-6: syscall fork -> 8
-7: syscall fork -> 9
-6: syscall fork -> 10
-7: syscall fork -> 11
-8: syscall fork -> 12
-7: syscall fork -> 13
-6: syscall fork -> 14
-8: syscall fork -> 15
-9: syscall fork -> 16
-6: syscall fork -> 17
-7: syscall fork -> 18
-9: syscall fork -> 19
-7: syscall fork -> 20
-6: syscall fork -> 21
-7: syscall fork -> 22
-6: syscall fork -> 23
-8: syscall fork -> 24
-7: syscall fork -> 25
-6: syscall fork -> 26
-7: syscall fork -> 27
-8: syscall fork -> 28
-14: syscall fork -> 29
-13: syscall fork -> 30
-14: syscall fork -> 32
-13: syscall fork -> 33
-14: syscall fork -> 34
-16: syscall fork -> 31
-13: syscall fork -> 35
-14: syscall fork -> 36
-6: syscall fork -> 37
-13: syscall fork -> 38
-14: syscall fork -> 39
-13: syscall fork -> 40
-14: syscall fork -> 41
-13: syscall fork -> 42
-14: syscall fork -> 43
-19: syscall fork -> 44
-14: syscall fork -> 45
-24: syscall fork -> 46
-14: syscall fork -> 47
-24: syscall fork -> 48
-27: syscall fork -> 49
-14: syscall fork -> 50
-14: syscall fork -> 51
-12: syscall fork -> 52
-27: syscall fork -> 53
-18: syscall fork -> 54
-27: syscall fork -> 55
-19: syscall fork -> 56
-24: syscall fork -> 57
-19: syscall fork -> 58
-24: syscall fork -> 60
-31: syscall fork -> 59
-19: syscall fork -> 61
-31: syscall fork -> 62
-26: syscall fork -> 63
-6: syscall fork -> 64
-31: syscall fork -> 65
-6: syscall fork -> -1
-40: syscall fork -> -1
-OK
-3: syscall fork -> 66
-qemu-system-riscv64: terminating on signal 15 from pid 5267 (make)
+$ sh < xargstest.sh
+$ echo DONE
+$ $ $ $ $ exec find failed
+$ $ DONEqemu-system-riscv64: terminating on signal 15 from pid 12517 (make)

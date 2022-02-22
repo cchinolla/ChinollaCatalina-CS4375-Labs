@@ -4,7 +4,7 @@ xv6 kernel is booting
 hart 2 starting
 hart 1 starting
 init: starting sh
-$ echo > zADSQVou
-$ find . zADSQVou
+$ echo > PlT0fpeG
+$ find . PlT0fpeG
 exec find failed
-$ qemu-system-riscv64: terminating on signal 15 from pid 20676 (make)
+$ qemu-system-riscv64: terminating on signal 15 from pid 12451 (make)

@@ -1,0 +1,13 @@
+#include "kernel/types.h"
+#include "kernel/stat.h"
+#include "user/user.h"
+#include "kernel/param.h"
+
+int main(int argc, char *argv[]){
+	char buf[512];
+	char *ex[MAXARG] = {0}; //setting max
+	int index = 0;
+
+	for(int i = 1; i <argc
+
+}

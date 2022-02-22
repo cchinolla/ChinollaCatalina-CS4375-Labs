@@ -4,12 +4,12 @@ xv6 kernel is booting
 hart 1 starting
 hart 2 starting
 init: starting sh
-$ mkdir R701vmcR
-$ echo > R701vmcR/IhJna6HK
-$ mkdir R701vmcR/8NAhTDyc
-$ echo > R701vmcR/8NAhTDyc/IhJna6HK
-$ mkdir HF3eCPx7
-$ echo > HF3eCPx7/IhJna6HK
-$ find . IhJna6HK
+$ mkdir SfHffP09
+$ echo > SfHffP09/kV2T87tO
+$ mkdir SfHffP09/WUrZPXkk
+$ echo > SfHffP09/WUrZPXkk/kV2T87tO
+$ mkdir ygtHTWkD
+$ echo > ygtHTWkD/kV2T87tO
+$ find . kV2T87tO
 exec find failed
-$ qemu-system-riscv64: terminating on signal 15 from pid 20709 (make)
+$ qemu-system-riscv64: terminating on signal 15 from pid 12484 (make)
