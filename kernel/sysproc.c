@@ -8,6 +8,18 @@
 #include "proc.h"
 
 uint64
+sys_strace(void){
+//	int stracemask;
+	if(argint(0, &myproc()->stracemask) < 0){//from functions in proc.h and
+		return -1;		//sysproc.c examples
+	}
+	//proc structure
+//	struct proc* p = myproc();
+//	p->stracemask = stracemask; 
+	return 0; //return value
+}
+
+uint64
 sys_exit(void)
 {
   int n;

@@ -6,6 +6,7 @@
 #include "proc.h"
 #include "syscall.h"
 #include "defs.h"
+//#include "string.h"
 
 // Fetch the uint64 at addr from the current process.
 int
@@ -104,6 +105,7 @@ extern uint64 sys_unlink(void);
 extern uint64 sys_wait(void);
 extern uint64 sys_write(void);
 extern uint64 sys_uptime(void);
+extern uint64 sys_strace(void);
 
 static uint64 (*syscalls[])(void) = {
 [SYS_fork]    sys_fork,
@@ -127,13 +129,22 @@ static uint64 (*syscalls[])(void) = {
 [SYS_link]    sys_link,
 [SYS_mkdir]   sys_mkdir,
 [SYS_close]   sys_close,
+[SYS_strace]  sys_strace,
 };
 
 void
 syscall(void)
 {
+  char* syscall_names[] = {
+	"",
+	"fork", "exit", "wait", "pipe", "read", "kill", "exec", "fstat",
+	"chdir", "dup", "getpid", "sbrk", "sleep", "uptime", "open", "write",
+	"mknod", "unlink", "link", "mkdir", "close", "strace",
+	};
+
   int num;
   struct proc *p = myproc();
+ // char readS="read";
 
   num = p->trapframe->a7;
   if(num > 0 && num < NELEM(syscalls) && syscalls[num]) {
@@ -142,5 +153,11 @@ syscall(void)
     printf("%d %s: unknown sys call %d\n",
             p->pid, p->name, num);
     p->trapframe->a0 = -1;
+  }
+  if(p->stracemask >> num){
+	//if(strcmp(syscall_names[num],readS)){
+	//	printf("%d",read.f);
+//	}
+	printf("%d: syscall %s -> %d\n", p->pid, syscall_names[num], p->trapframe->a0);
   }
 }
