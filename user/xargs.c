@@ -18,7 +18,7 @@ int main(int argc, char *argv[]){
 		int index = buf_index;//set index to buffer index
 		while(1){
 			length = read(0, &buf[buf_index], 1);//read
-			if(length == 0){
+			if(length ==0 || buf[buf_index] == '\n' ){
 				buf[buf_index] = 0;
 				break;
 			}
@@ -33,6 +33,7 @@ int main(int argc, char *argv[]){
 		buf[buf_index++] = 0;
 		exec_argv[argv_index++] = buf + index;
 	}
+
 	if(fork() == 0){
 		exec(argv[1], exec_argv);
 		exit(0);
